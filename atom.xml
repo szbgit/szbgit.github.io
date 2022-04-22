@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>萧易寒</title>
+  
+  
+  <link href="https://szbgit.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://szbgit.github.io/"/>
+  <updated>2022-04-04T07:18:10.273Z</updated>
+  <id>https://szbgit.github.io/</id>
+  
+  <author>
+    <name>萧易寒</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://szbgit.github.io/2022/040416107.html"/>
+    <id>https://szbgit.github.io/2022/040416107.html</id>
+    <published>2022-04-04T06:08:28.657Z</published>
+    <updated>2022-04-04T07:18:10.273Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
