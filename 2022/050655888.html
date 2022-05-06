@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 萧易寒">
+    <meta name="keywords" content="Centos7安装并配置MySQL5.6教程, 萧易寒">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | 萧易寒</title>
+    <title>Centos7安装并配置MySQL5.6教程 | 萧易寒</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/szbgit/szbgit.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/szbgit/szbgit.github.io/libs/awesome/css/all.css">
@@ -228,12 +228,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/szbgit/szbgit.github.io/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/szbgit/szbgit.github.io/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">Centos7安装并配置MySQL5.6教程</h1>
                 </div>
             </div>
         </div>
@@ -349,8 +349,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Hello-World/">
-                                <span class="chip bg-color">Hello World</span>
+                            <a href="/tags/Centos7-MySQL/">
+                                <span class="chip bg-color">Centos7-MySQL</span>
                             </a>
                         
                     </div>
@@ -361,8 +361,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Java/" class="post-category">
-                                Java
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
+                                数据库
                             </a>
                         
                     </div>
@@ -374,7 +374,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-08-27
+                    2022-05-06
                 </div>
                 
 
@@ -383,14 +383,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    73
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    6 分
                 </div>
                 
 
@@ -410,19 +410,188 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
+                <p>在接下来的MySQL安装过程中，请一定保证自己当前所在目录是正确的! </p>
+<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># 表示当前目录为~</span>
+
+<span class="token punctuation">[</span>root@localhost mysql<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># 表示当前目录为mysql</span>
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server
+<h2 id="一、安装MySQL"><a href="#一、安装MySQL" class="headerlink" title="一、安装MySQL"></a>一、安装MySQL</h2><p>1、下载安装包mysql-5.6.34-linux-glibc2.5-x86_64.tar（可前往官网自行下载：<a target="_blank" rel="noopener" href="http://dev.mysql.com/downloads/mysql/%EF%BC%89">http://dev.mysql.com/downloads/mysql/）</a></p>
+<pre class=" language-bash"><code class="language-bash">CentOS7 64位系统下Mysql5.6版本的官方下载地址：https://dev.mysql.com/get/Downloads/MySQL-5.6/mysql-5.6.45-linux-glibc2.12-x86_64.tar.gz
+
+百度云资源
+链接：https://pan.baidu.com/s/1iR2a_8kKPB4Ykkx9uQA5Kw 
+提取码：6666
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate
+<p>2、卸载系统自带的Mariadb</p>
+<p>打开Terminal终端：</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># rpm -qa|grep mariadb  // 查询出来已安装的mariadb</span>
+<span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># rpm -e --nodeps 文件名  // 卸载mariadb，文件名为上述命令查询出来的文件</span>
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy
+<p>3、删除etc目录下的my.cnf</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># rm /etc/my.cnf</span>
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>4、执行以下命令来创建mysql用户组</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># groupadd mysql</span>
+</code></pre>
+<p>5、执行以下命令来创建一个用户名为mysql的用户并加入mysql用户组</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># useradd -g mysql mysql</span>
+</code></pre>
+<p>6、将下载的压缩包放到 /usr/local/ 目录下（Xshell+Xftp）</p>
+<p>7、解压安装包</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost local<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># tar -xvf mysql-5.6.34-linux-glibc2.5-x86_64.tar</span>
+
+如果压缩包为：
+mysql-5.6.34-linux-glibc2.5-x86_64.tar.gz
+则解压命令为: 
+<span class="token function">tar</span> -zxvf mysql-5.6.34-linux-glibc2.5-x86_64.tar.gz
+</code></pre>
+<p>8、将解压好的文件夹重命名为mysql</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost local<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># mv 解压出来的文件夹名 mysql</span>
+</code></pre>
+<p>9、在 etc 下新建配置文件my.cnf，并在该文件中添加一下代码：</p>
+<pre><code>[mysql]
+### 设置mysql客户端默认字符集
+default-character-set=utf8 
+socket=/var/lib/mysql/mysql.sock
+
+[mysqld]
+skip-name-resolve
+#设置3306端口
+port = 3306 
+socket=/var/lib/mysql/mysql.sock
+
+### 设置mysql的安装目录
+basedir=/usr/local/mysql
+
+### 设置mysql数据库的数据的存放目录
+datadir=/usr/local/mysql/data
+
+# 允许最大连接数
+max_connections=200
+
+# 服务端使用的字符集默认为8比特编码的latin1字符集
+character-set-server=utf8
+
+# 创建新表时将使用的默认存储引擎
+default-storage-engine=INNODB
+lower_case_table_name=1
+max_allowed_packet=16M
+</code></pre>
+<p>当然，也有简单方式：直接copy一份my.cnf文件到/etc下，然后再修改即可。</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost support-files<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># cp my-default.cnf /etc/my.cnf</span>
+</code></pre>
+<p>然后，配置/etc目录下的my.cnf文件</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost support-files<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># vim /etc/my.cnf</span>
+</code></pre>
+<p>通过vim编辑器编辑my.cnf ,按 i 进入编辑，按esc编辑模式，按  ：wq 保存退出!</p>
+<p>10、进入安装mysql软件目录</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># cd /usr/local/mysql</span>
+<span class="token punctuation">[</span>root@localhost mysql<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># chown -R mysql:mysql ./    修改当前目录拥有着为mysql用户</span>
+<span class="token punctuation">[</span>root@localhost mysql<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># ./scripts/mysql_install_db --user=mysql --basedir=/usr/local/mysql/ --datadir=/usr/local/mysql/data/ 安装数据库</span>
+</code></pre>
+<p>注：若执行以上最后一个命令出现以下问题： </p>
+<pre class=" language-bash"><code class="language-bash">FATAL ERROR: please <span class="token function">install</span> the following Perl modules before executing 
+./scripts/mysql_install_db:Data::Dumper
+</code></pre>
+<p>解决方法 ：安装autoconf库</p>
+<pre class=" language-bash"><code class="language-bash">yum -y <span class="token function">install</span> autoconf   //此包安装时会安装Data:Dumper模块
+</code></pre>
+<p>安装完成重新执行上述最后一个命令！</p>
+<p>如果安装不了，可下载下方链接压缩包资源，解压后上传，运行下方命令安装！</p>
+<pre class=" language-bash"><code class="language-bash">1.安装所有的rpm文件（gcc相关和perl模块），我把所有的RPM都放到一个文件里了，可以拷贝到系统里利用下面代码一键安装
+链接：https://pan.baidu.com/s/1XWrqHPqV_IRNETFatkoisg 
+提取码：6666
+
+rpm  -ivh  *.rpm --nodeps --force
+
+M4+Autoconf资源下载或者去官网下
+链接：https://pan.baidu.com/s/1xog5AjwtYv7igyo-1Mvisg 
+提取码：6666
+
+2.安装M4
+在http://mirrors.kernel.org/gnu/m4/ 选择所需要的对应版本的tar.gz下载
+
+<span class="token comment" spellcheck="true">#拷贝到centos系统上解压</span>
+<span class="token function">tar</span> -xzvf m4-1.4.13.tar.gz
+<span class="token comment" spellcheck="true">#到解压目录中</span>
+<span class="token function">cd</span> m4-1.4.13
+<span class="token comment" spellcheck="true">#配置编译环境</span>
+./configure -prefix<span class="token operator">=</span>/usr/local
+<span class="token comment" spellcheck="true">#编译并安装</span>
+<span class="token function">make</span> <span class="token operator">&amp;&amp;</span> <span class="token function">make</span> <span class="token function">install</span>
+
+3.安装autoconf
+下载地址：http://ftp.gnu.org/gnu/autoconf
+<span class="token function">tar</span> -xzvf autoconf-2.65.tar.gz
+<span class="token function">cd</span> autoconf-2.65 
+./configure -prefix<span class="token operator">=</span>/usr/local
+<span class="token function">make</span> <span class="token operator">&amp;&amp;</span> <span class="token function">make</span> <span class="token function">install</span>
+</code></pre>
+<p>重新回到上述第三个命令继续操作：</p>
+<pre class=" language-bash"><code class="language-bash"> <span class="token punctuation">[</span>root@localhost mysql<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># ./scripts/mysql_install_db --user=mysql --basedir=/usr/local/mysql/ --datadir=/usr/local/mysql/data/ 安装数据库</span>
+</code></pre>
+<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost mysql<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># chown -R mysql:mysql data 修改当前data目录的拥有者为mysql用户</span>
+</code></pre>
+<p>到此数据库安装完毕！</p>
+<h2 id="二、配置MySQL"><a href="#二、配置MySQL" class="headerlink" title="二、配置MySQL"></a>二、配置MySQL</h2><p>1、授予my.cnf最大权限</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># chmod 777 /etc/my.cnf</span>
+</code></pre>
+<p>如果报如下错：</p>
+<pre class=" language-bash"><code class="language-bash">mysqld_safe Directory <span class="token string">'/var/lib/mysql'</span> <span class="token keyword">for</span> UNIX socket <span class="token function">file</span> don't exists
+</code></pre>
+<p>建议直接新建了上述文件夹即可！</p>
+<p>2、复制启动脚本到资源目录</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost mysql<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># cp ./support-files/mysql.server /etc/rc.d/init.d/mysqld</span>
+</code></pre>
+<p>3、增加mysqld服务控制脚本执行权限</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost mysql<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># chmod +x /etc/rc.d/init.d/mysqld</span>
+</code></pre>
+<p>4、将mysqld服务加入到系统服务</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost mysql<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># chkconfig --add mysqld</span>
+</code></pre>
+<p>5、检查mysqld服务是否已经生效</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost mysql<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># chkconfig --list mysqld</span>
+</code></pre>
+<p>命令输出类似下面的结果:</p>
+<pre class=" language-bash"><code class="language-bash">mysqld 0:off 1:off 2:on 3:on 4:on 5:on 6:off
+</code></pre>
+<p>表明mysqld服务已经生效，在2、3、4、5运行级别随系统启动而自动启动，以后可以使用service命令控制mysql的启动和停止</p>
+<pre class=" language-bash"><code class="language-bash">命令为:service mysqld start和service mysqld stop
+</code></pre>
+<p>6、启动mysqld</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost mysql<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># service mysqld start</span>
+</code></pre>
+<p>如果报如下错误：</p>
+<pre class=" language-bash"><code class="language-bash">Starting MySQL.Logging to <span class="token string">'/usr/local/mysql/data/xxxxxx'</span>
+</code></pre>
+<p>一般是 权限 or 进程问题！</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># chmod 777 /usr/local/mysql/data</span>
+对data文件夹进行授权！
+
+进程问题可自行百度查询进行并kill 即可！
+</code></pre>
+<p>7、将mysql的bin目录加入PATH环境变量，编辑 ~/.bash_profile文件</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost mysql<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># vim ~/.bash_profile</span>
+</code></pre>
+<p>在文件最后添加如下信息:</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">export</span> PATH<span class="token operator">=</span><span class="token variable">$PATH</span>:/usr/local/mysql/bin
+</code></pre>
+<p>执行下面的命令是修改的内容立即生效:</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost mysql<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># source ~/.bash_profile</span>
+</code></pre>
+<p>8、以root账户登录mysql,默认是没有密码的</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost mysql<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># mysql -uroot -p</span>
+</code></pre>
+<p>要输入密码的时候直接回车即可！</p>
+<p>9、设置root账户密码为root（也可以修改成你要的密码）</p>
+<pre class=" language-bash"><code class="language-bash">mysql<span class="token operator">></span>use mysql<span class="token punctuation">;</span>
+mysql<span class="token operator">></span>update user <span class="token keyword">set</span> password<span class="token operator">=</span>password<span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span> where user<span class="token operator">=</span><span class="token string">'root'</span> and host<span class="token operator">=</span><span class="token string">'localhost'</span><span class="token punctuation">;</span>
+mysql<span class="token operator">></span>flush privileges<span class="token punctuation">;</span>
+</code></pre>
+<p>10、设置远程主机登录，注意下面的username 和 password改成你需要设置的用户和密码</p>
+<pre class=" language-bash"><code class="language-bash">mysql<span class="token operator">></span>GRANT ALL PRIVILEGES ON *.* TO <span class="token string">'username'</span>@<span class="token string">'%'</span> IDENTIFIED BY <span class="token string">'password'</span> WITH GRANT OPTION<span class="token punctuation">;</span>
+</code></pre>
+<p>在Centos 7上安装mysql5.6就完成了，当然，centos 6上安装mysql也可按照如此操作！</p>
 
                 
             </div>
@@ -449,7 +618,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://szbgit.github.io/2019/082716107.html">https://szbgit.github.io/2019/082716107.html</a>
+                    <a href="https://szbgit.github.io/2022/050655888.html">https://szbgit.github.io/2022/050655888.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -487,8 +656,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Hello-World/">
-                                    <span class="chip bg-color">Hello World</span>
+                                <a href="/tags/Centos7-MySQL/">
+                                    <span class="chip bg-color">Centos7-MySQL</span>
                                 </a>
                             
                         </div>
@@ -658,66 +827,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/090161485.html">
+                <a href="/2022/050655888.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/szbgit/szbgit.github.io/medias/featureimages/19.jpg" class="responsive-img" alt="Typora的使用手册">
+                        <img src="https://cdn.jsdelivr.net/gh/szbgit/szbgit.github.io/medias/featureimages/13.jpg" class="responsive-img" alt="Centos7安装并配置MySQL5.6教程">
                         
-                        <span class="card-title">Typora的使用手册</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-09-01
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E8%BD%AF%E4%BB%B6/" class="post-category">
-                                    软件
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Typora/">
-                        <span class="chip bg-color">Typora</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/082716107.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/szbgit/szbgit.github.io/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">Centos7安装并配置MySQL5.6教程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -728,14 +849,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-08-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-06
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java/" class="post-category">
-                                    Java
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
+                                    数据库
                                 </a>
                             
                             
@@ -746,8 +867,57 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hello-World/">
-                        <span class="chip bg-color">Hello World</span>
+                    <a href="/tags/Centos7-MySQL/">
+                        <span class="chip bg-color">Centos7-MySQL</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/09259697.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/szbgit/szbgit.github.io/medias/featureimages/11.jpg" class="responsive-img" alt="MyBatisPlus学习笔记">
+                        
+                        <span class="card-title">MyBatisPlus学习笔记</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Spring/" class="post-category">
+                                    Spring
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/MybatisPlus/">
+                        <span class="chip bg-color">MybatisPlus</span>
                     </a>
                     
                 </div>

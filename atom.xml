@@ -6,7 +6,7 @@
   <link href="https://szbgit.github.io/atom.xml" rel="self"/>
   
   <link href="https://szbgit.github.io/"/>
-  <updated>2022-04-25T16:03:50.446Z</updated>
+  <updated>2022-05-06T13:40:29.183Z</updated>
   <id>https://szbgit.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Centos7安装并配置MySQL5.6教程</title>
+    <link href="https://szbgit.github.io/2022/050655888.html"/>
+    <id>https://szbgit.github.io/2022/050655888.html</id>
+    <published>2022-05-06T12:41:15.000Z</published>
+    <updated>2022-05-06T13:40:29.183Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在接下来的MySQL安装过程中，请一定保证自己当前所在目录是正确的! &lt;/p&gt;
+&lt;pre class=&quot; language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token</summary>
+        
+      
+    
+    
+    
+    <category term="数据库" scheme="https://szbgit.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="Centos7-MySQL" scheme="https://szbgit.github.io/tags/Centos7-MySQL/"/>
+    
+  </entry>
   
   <entry>
     <title>MyBatisPlus学习笔记</title>
@@ -46,7 +72,7 @@
     <link href="https://szbgit.github.io/2020/100525247.html"/>
     <id>https://szbgit.github.io/2020/100525247.html</id>
     <published>2020-10-05T13:05:23.000Z</published>
-    <updated>2022-05-05T14:42:30.794Z</updated>
+    <updated>2022-05-05T14:43:10.553Z</updated>
     
     
       
