@@ -29,9 +29,9 @@
 
     <script src="https://cdn.jsdelivr.net/gh/szbgit/szbgit.github.io/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 6.1.0">
+<meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="萧易寒" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="萧易寒" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -450,9 +450,7 @@ mysql-5.6.34-linux-glibc2.5-x86_64.tar.gz
 </code></pre>
 <p>9、在 etc 下新建配置文件my.cnf，并在该文件中添加一下代码：</p>
 <pre class=" language-bash"><code class="language-bash"><span class="token punctuation">[</span>mysql<span class="token punctuation">]</span>
-
 <span class="token comment" spellcheck="true"># 设置mysql客户端默认字符集</span>
-
 default-character-set<span class="token operator">=</span>utf8 
 socket<span class="token operator">=</span>/var/lib/mysql/mysql.sock
 
@@ -463,23 +461,18 @@ port <span class="token operator">=</span> 3306
 socket<span class="token operator">=</span>/var/lib/mysql/mysql.sock
 
 <span class="token comment" spellcheck="true"># 设置mysql的安装目录</span>
-
 basedir<span class="token operator">=</span>/usr/local/mysql
 
 <span class="token comment" spellcheck="true"># 设置mysql数据库的数据的存放目录</span>
-
 datadir<span class="token operator">=</span>/usr/local/mysql/data
 
 <span class="token comment" spellcheck="true"># 允许最大连接数</span>
-
 max_connections<span class="token operator">=</span>200
 
 <span class="token comment" spellcheck="true"># 服务端使用的字符集默认为8比特编码的latin1字符集</span>
-
 character-set-server<span class="token operator">=</span>utf8
 
 <span class="token comment" spellcheck="true"># 创建新表时将使用的默认存储引擎</span>
-
 default-storage-engine<span class="token operator">=</span>INNODB
 lower_case_table_name<span class="token operator">=</span>1
 max_allowed_packet<span class="token operator">=</span>16M
