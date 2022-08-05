@@ -29,9 +29,9 @@
 
     <script src="https://cdn.jsdelivr.net/gh/szbgit/szbgit.github.io/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="萧易寒" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.1.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="萧易寒" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -499,14 +499,11 @@
 <span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">></span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205051726340.png" alt="QQ图片20220505172346"></p>
 <ul>
 <li>外部引入</li>
 </ul>
 <pre class=" language-js"><code class="language-js"><span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"js/qj.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205051726350.png" alt="QQ图片20220505172532"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205051727791.png" alt="QQ图片20220505172654"></p>
 <h3 id="3-2-基本语法入门"><a href="#3-2-基本语法入门" class="headerlink" title="3.2 基本语法入门"></a>3.2 基本语法入门</h3><pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
@@ -535,11 +532,6 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205051728442.png" alt="QQ图片20220505172758"></p>
-<ul>
-<li>浏览器必备调试须知。</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205051729064.png" alt="QQ图片20220505172913"></p>
 <h3 id="3-3-数据类型"><a href="#3-3-数据类型" class="headerlink" title="3.3 数据类型"></a>3.3 数据类型</h3><blockquote>
 <p>数值，文本，图形，音频，视频</p>
 </blockquote>
@@ -586,15 +578,14 @@
 Math<span class="token punctuation">.</span><span class="token function">abs</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">/</span><span class="token number">3</span><span class="token operator">-</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">-</span><span class="token number">2</span><span class="token operator">/</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">&lt;</span><span class="token number">0.00000001</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205051730510.png" alt="QQ图片20220505172955"></p>
+<li><p>null 和 undefined</p>
 <ul>
-<li>null 和 undefined<ul>
 <li>null 空；</li>
 <li>undefined 未定义；</li>
 </ul>
 </li>
-<li>数组<ul>
+<li><p>数组</p>
+<ul>
 <li>Java的数组必须是相同类型的对象，JS中不需要这样。</li>
 </ul>
 </li>
@@ -605,11 +596,10 @@ Math<span class="token punctuation">.</span><span class="token function">abs</sp
 <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token string">'hello'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <ul>
-<li>取数字下标：如果越界了，就会报undefined。</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205051717076.png" alt="在这里插入图片描述"></p>
+<li><p>取数字下标：如果越界了，就会报undefined。</p>
+</li>
+<li><p>对象：是大括号，数组是中括号。</p>
 <ul>
-<li>对象：是大括号，数组是中括号。<ul>
 <li>每个属性之间使用逗号隔开，最后一个属性不需要逗号。</li>
 </ul>
 </li>
@@ -630,9 +620,7 @@ Math<span class="token punctuation">.</span><span class="token function">abs</sp
 person<span class="token punctuation">.</span>age
 <span class="token comment" spellcheck="true">// 3</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205051731497.png" alt="QQ图片20220505173121"></p>
-<h3 id="3-4-检查格式"><a href="#3-4-检查格式" class="headerlink" title="3.4 检查格式"></a>3.4 检查格式</h3><p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205051733437.png" alt="QQ图片20220505173252"></p>
-<pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
+<h3 id="3-4-检查格式"><a href="#3-4-检查格式" class="headerlink" title="3.4 检查格式"></a>3.4 检查格式</h3><pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -655,7 +643,6 @@ person<span class="token punctuation">.</span>age
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052225728.png" alt="QQ图片20220505222529"></p>
 <h2 id="4-数据类型"><a href="#4-数据类型" class="headerlink" title="4.数据类型"></a>4.数据类型</h2><h3 id="4-1-字符串"><a href="#4-1-字符串" class="headerlink" title="4.1 字符串"></a>4.1 字符串</h3><ul>
 <li>正常字符串我们使用 单引号，或者双引号包裹；</li>
 <li>注意转义字符 \</li>
@@ -677,7 +664,6 @@ person<span class="token punctuation">.</span>age
 <span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">></span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052226633.png" alt="QQ图片20220505222619"></p>
 <ul>
 <li>多行字符串编写</li>
 </ul>
@@ -711,7 +697,6 @@ person<span class="token punctuation">.</span>age
 str<span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 str<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052228404.png" alt="QQ图片20220505222800"></p>
 <ul>
 <li>console.log(str.indexOf(‘b’));</li>
 <li>substring，从0开始。</li>
@@ -719,7 +704,6 @@ str<span class="token punctuation">.</span><span class="token function">toLowerC
 <pre class=" language-js"><code class="language-js">str<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 从第一个字符串截取到最后一个字符串</span>
 str<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// [1,3)</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052229327.png" alt="QQ图片20220505222854"></p>
 <h3 id="4-2-数组"><a href="#4-2-数组" class="headerlink" title="4.2 数组"></a>4.2 数组</h3><ul>
 <li>Array可以包含任意的数据类型。<ul>
 <li>长度：arr.length；<ul>
@@ -766,8 +750,6 @@ arr<span class="token punctuation">.</span><span class="token function">join</sp
 <span class="token keyword">var</span> arr2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">12</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 arr2<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052231202.png" alt="QQ图片20220505223048"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052231716.png" alt="QQ图片20220505223136"></p>
 <h3 id="4-3-对象"><a href="#4-3-对象" class="headerlink" title="4.3 对象"></a>4.3 对象</h3><pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> 对象名 <span class="token operator">=</span> <span class="token punctuation">{</span>
     属性名：属性值，
     属性名：属性值，
@@ -794,25 +776,23 @@ person<span class="token punctuation">.</span><span class="token function">hasOw
 person<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span><span class="token string">'age'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <ul>
-<li>JS中对象，{…}表示一个对象，建制对描述属性xxx：xxx，多个属性之间用逗号隔开，最后一个属性不加逗号！</li>
-<li>JavaScript中的所有的键都是字符串，值是任意对象！</li>
-<li>对象赋值：</li>
+<li><p>JS中对象，{…}表示一个对象，建制对描述属性xxx：xxx，多个属性之间用逗号隔开，最后一个属性不加逗号！</p>
+</li>
+<li><p>JavaScript中的所有的键都是字符串，值是任意对象！</p>
+</li>
+<li><p>对象赋值(略)</p>
+</li>
+<li><p>使用一个不存在的对象属性，不会报错！undefined。</p>
+</li>
+<li><p>动态的删减属性，通过delete删除对象的属性。</p>
+</li>
+<li><p>动态的添加，直接给新的属性添加值即可。</p>
+</li>
+<li><p>判断属性值是否在这个对象中！xxx in xxx。</p>
+</li>
+<li><p>判断一个属性是否是这个对象自身拥有的 hasOwnProperty()。</p>
+</li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052232316.png" alt="在这里插入图片描述"></p>
-<ul>
-<li>使用一个不存在的对象属性，不会报错！undefined。</li>
-<li>动态的删减属性，通过delete删除对象的属性。</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052232136.png" alt="在这里插入图片描述"></p>
-<ul>
-<li>动态的添加，直接给新的属性添加值即可。</li>
-<li>判断属性值是否在这个对象中！xxx in xxx。</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052232190.png" alt="在这里插入图片描述"></p>
-<ul>
-<li>判断一个属性是否是这个对象自身拥有的 hasOwnProperty()。</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052233749.png" alt="在这里插入图片描述"></p>
 <h3 id="4-4-流程控制"><a href="#4-4-流程控制" class="headerlink" title="4.4 流程控制"></a>4.4 流程控制</h3><ul>
 <li>IF判断。</li>
 </ul>
@@ -863,7 +843,6 @@ person<span class="token punctuation">.</span><span class="token function">hasOw
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052233371.png" alt="在这里插入图片描述"></p>
 <ul>
 <li>for循环判断。</li>
 </ul>
@@ -883,10 +862,8 @@ age<span class="token punctuation">.</span><span class="token function">forEach<
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </code></pre>
 </li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052233086.png" alt="在这里插入图片描述"></p>
-<ul>
-<li>for……in——下标：</li>
+<li><p>for……in——下标：</p>
+</li>
 </ul>
 <pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -909,7 +886,6 @@ age<span class="token punctuation">.</span><span class="token function">forEach<
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052233260.png" alt="在这里插入图片描述"></p>
 <h3 id="4-5-Map和Set"><a href="#4-5-Map和Set" class="headerlink" title="4.5 Map和Set"></a>4.5 Map和Set</h3><ul>
 <li>Map</li>
 </ul>
@@ -936,7 +912,6 @@ age<span class="token punctuation">.</span><span class="token function">forEach<
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052233904.png" alt="在这里插入图片描述"></p>
 <ul>
 <li>Set：无序不重复的集合。</li>
 </ul>
@@ -945,7 +920,6 @@ age<span class="token punctuation">.</span><span class="token function">forEach<
 <span class="token keyword">set</span><span class="token punctuation">.</span><span class="token keyword">delete</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">// 删除</span>
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">set</span><span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">// 是否包含某个元素</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052233338.png" alt="在这里插入图片描述"></p>
 <h3 id="4-6-iterator"><a href="#4-6-iterator" class="headerlink" title="4.6 iterator"></a>4.6 iterator</h3><ul>
 <li>使用iterator来遍历迭代我们Map，Set！</li>
 <li>遍历数组</li>
@@ -1021,7 +995,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <pre class=" language-js"><code class="language-js"><span class="token function">abs</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">// 12</span>
 <span class="token function">abs</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">36</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">// 36</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052233336.png" alt="在这里插入图片描述"></p>
 <ul>
 <li>参数问题：javaScript可以传任意个参数，也可以不传递参数。</li>
 <li>参数进来是否存在问题？假设不存在参数，如何规避？</li>
@@ -1057,7 +1030,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052233645.png" alt="在这里插入图片描述"></p>
 <ul>
 <li>问题：arguments包含所有的参数，我们有时候想使用多余的参数来进行附加操作。需要排除已有参数。</li>
 </ul>
@@ -1080,7 +1052,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 
 <span class="token function">aaa</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052234377.png" alt="在这里插入图片描述"></p>
 <ul>
 <li>rest参数只能写在最后面，必须用…标识。</li>
 </ul>
@@ -1105,7 +1076,6 @@ x <span class="token operator">=</span> x <span class="token operator">+</span> 
     x <span class="token operator">=</span> x <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052234021.png" alt="在这里插入图片描述"></p>
 <ul>
 <li>内部函数可以访问外部函数的成员，反之则不行。</li>
 </ul>
@@ -1121,7 +1091,6 @@ x <span class="token operator">=</span> x <span class="token operator">+</span> 
 <span class="token punctuation">}</span>
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>z<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052234106.png" alt="在这里插入图片描述"></p>
 <ul>
 <li>假设，内部函数变量和外部函数变量，重名！</li>
 </ul>
@@ -1137,7 +1106,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 
 <span class="token function">num</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052234758.png" alt="在这里插入图片描述"></p>
 <ul>
 <li>假设在JavaScript中，函数查找变量从自身函数开始~， 由“内”向“外”查找，假设外部存在这个同名的函数变量，则内部函数会屏蔽外部函数的变量。</li>
 </ul>
@@ -1184,7 +1152,6 @@ x <span class="token operator">=</span> <span class="token number">1</span><span
 <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052234897.png" alt="在这里插入图片描述"></p>
 <ul>
 <li>全局对象Windows</li>
 </ul>
@@ -1274,7 +1241,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 PI <span class="token operator">=</span> <span class="token string">'123'</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">// Uncaught SyntaxError: Identifier 'PI' has already been declared</span>
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>PI<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052235545.png" alt="在这里插入图片描述"></p>
 <h3 id="5-3-方法"><a href="#5-3-方法" class="headerlink" title="5.3 方法"></a>5.3 方法</h3><blockquote>
 <p>定义方法</p>
 <ul>
@@ -1313,7 +1279,6 @@ subeily<span class="token punctuation">.</span><span class="token function">age<
 subei<span class="token punctuation">.</span><span class="token function">age</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token function">getAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052235964.png" alt="在这里插入图片描述"></p>
 <ul>
 <li>this是无法指向的，是默认指向调用它的那个对象的；</li>
 </ul>
@@ -1344,7 +1309,6 @@ subei<span class="token punctuation">.</span><span class="token function">age</s
 
 getAge<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>xiaosan<span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052235015.png" alt="在这里插入图片描述"></p>
 <h2 id="6-内部对象"><a href="#6-内部对象" class="headerlink" title="6.内部对象"></a>6.内部对象</h2><blockquote>
 <p>标准对象</p>
 </blockquote>
@@ -1357,7 +1321,6 @@ getAge<span class="token punctuation">.</span><span class="token function">apply
 <span class="token keyword">typeof</span> Math<span class="token punctuation">.</span>abs
 <span class="token keyword">typeof</span> undefined
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052235418.png" alt="在这里插入图片描述"></p>
 <h3 id="6-1-Date"><a href="#6-1-Date" class="headerlink" title="6.1 Date"></a>6.1 Date</h3><pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> now <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 now<span class="token punctuation">.</span><span class="token function">getFullYear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 年</span>
 now<span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 月</span>
@@ -1378,7 +1341,6 @@ now<span class="token punctuation">.</span>toLocaleString<span class="token punc
 now<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 now<span class="token punctuation">.</span><span class="token function">toGMTString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052235265.png" alt="在这里插入图片描述"></p>
 <h3 id="6-2-JSON"><a href="#6-2-JSON" class="headerlink" title="6.2 JSON"></a>6.2 JSON</h3><blockquote>
 <p><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/JSON">JSON</a>是什么？</p>
 <ul>
@@ -1410,7 +1372,6 @@ now<span class="token punctuation">.</span><span class="token function">toGMTStr
 <span class="token comment" spellcheck="true">// JSON字符转化为对象，参数为 JSON字符</span>
 <span class="token keyword">var</span> obj <span class="token operator">=</span> JSON<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token string">'{"name":"subei","age":"22","sex":"W"}'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052235361.png" alt="在这里插入图片描述"></p>
 <ul>
 <li>JSON和JS对象的区别：</li>
 </ul>
@@ -1452,8 +1413,6 @@ now<span class="token punctuation">.</span><span class="token function">toGMTStr
 <span class="token comment" spellcheck="true">// xiaoming.__proto__ = Student;</span>
 xiaoming<span class="token punctuation">.</span>__proto__ <span class="token operator">=</span> bird<span class="token punctuation">;</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052235813.png" alt="在这里插入图片描述"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052236279.png" alt="在这里插入图片描述"></p>
 <pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// ES6之前========================</span>
 <span class="token keyword">function</span> <span class="token function">Student</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">{</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
@@ -1521,11 +1480,6 @@ Student<span class="token punctuation">.</span>prototype<span class="token punct
     <span class="token keyword">var</span> xiaohong <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XStudent</span><span class="token punctuation">(</span><span class="token string">"xiaohong"</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052236124.png" alt="在这里插入图片描述"></p>
-<blockquote>
-<p>原型链：</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052236749.webp" alt="在这里插入图片描述"></p>
 <h2 id="8-操作BOM对象"><a href="#8-操作BOM对象" class="headerlink" title="8.操作BOM对象"></a>8.操作BOM对象</h2><blockquote>
 <p>浏览器介绍</p>
 </blockquote>
@@ -1573,7 +1527,6 @@ navigator<span class="token punctuation">.</span>userAgent
 
 navigator<span class="token punctuation">.</span>platform
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052236446.png" alt="在这里插入图片描述"></p>
 <ul>
 <li>大多数时候，不会使用<code>navigator</code>对象，因为会被认为修改!</li>
 <li>不建议使用这些属性来判断和编写代码。</li>
@@ -1592,11 +1545,6 @@ screen<span class="token punctuation">.</span>height
 <span class="token comment" spellcheck="true">// 设置新的地址</span>
 location<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token string">'https://blog.csdn.net/m0_46153949'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052236829.png" alt="在这里插入图片描述"></p>
-<blockquote>
-<p>document（内容DOM）：document代表当前的页面，HTML DOM文档树。</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052236627.png" alt="在这里插入图片描述"></p>
 <ul>
 <li>获取具体的文档树节点。</li>
 </ul>
@@ -1621,13 +1569,11 @@ location<span class="token punctuation">.</span><span class="token function">ass
 <span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">></span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052240878.png" alt="在这里插入图片描述"></p>
 <ul>
-<li>获取cookie</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052236019.png" alt="在这里插入图片描述"></p>
-<ul>
-<li>劫持cookie原理：</li>
+<li><p>获取cookie</p>
+</li>
+<li><p>劫持cookie原理：</p>
+</li>
 </ul>
 <pre class=" language-js"><code class="language-js"><span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"str.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>恶意人员获取本机cookie上传至其私人服务器 <span class="token operator">--</span><span class="token operator">></span>
@@ -1686,7 +1632,6 @@ history<span class="token punctuation">.</span><span class="token function">forw
 <span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">></span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052237905.png" alt="在这里插入图片描述"></p>
 <ul>
 <li>之后尽量都使用jQuery();</li>
 </ul>
@@ -1725,7 +1670,6 @@ history<span class="token punctuation">.</span><span class="token function">forw
 </ul>
 </li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052237520.png" alt="在这里插入图片描述"></p>
 <blockquote>
 <p>删除节点</p>
 <ul>
@@ -1793,7 +1737,6 @@ history<span class="token punctuation">.</span><span class="token function">forw
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052237459.png" alt="在这里插入图片描述"></p>
 <blockquote>
 <p>创建一个新的标签</p>
 </blockquote>
@@ -1900,7 +1843,6 @@ list<span class="token punctuation">.</span><span class="token function">insertB
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052237054.png" alt="在这里插入图片描述"></p>
 <ul>
 <li>提交表单。md5加密密码，表单优化。</li>
 </ul>
@@ -1964,7 +1906,6 @@ list<span class="token punctuation">.</span><span class="token function">insertB
 <blockquote>
 <p>获取<a target="_blank" rel="noopener" href="https://code.jquery.com/">jQuery</a></p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052237314.png" alt="在这里插入图片描述"></p>
 <ul>
 <li><p>公式</p>
 <p>：$(selector).action()</p>
@@ -1974,7 +1915,6 @@ list<span class="token punctuation">.</span><span class="token function">insertB
 </ul>
 </li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052237535.png" alt="在这里插入图片描述"></p>
 <pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
@@ -1998,7 +1938,6 @@ list<span class="token punctuation">.</span><span class="token function">insertB
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052237989.png" alt="在这里插入图片描述"></p>
 <blockquote>
 <p>选择器</p>
 </blockquote>
@@ -2062,7 +2001,6 @@ mouse<span class="token punctuation">:</span><span class="token operator">&lt;</
 <span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">></span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052238852.png" alt="在这里插入图片描述"></p>
 <blockquote>
 <p>操作DOM</p>
 </blockquote>
@@ -2094,7 +2032,6 @@ mouse<span class="token punctuation">:</span><span class="token operator">&lt;</
 <span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">></span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052238460.png" alt="在这里插入图片描述"></p>
 <ul>
 <li>CSS的操作</li>
 </ul>
@@ -2113,7 +2050,6 @@ mouse<span class="token punctuation">:</span><span class="token operator">&lt;</
 <span class="token function">$</span><span class="token punctuation">(</span>window<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">height</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#test-ul li[name=python]'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toggle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202205052238717.png" alt="在这里插入图片描述"></p>
 <ul>
 <li>未来ajax()；</li>
 </ul>

@@ -29,9 +29,9 @@
 
     <script src="https://cdn.jsdelivr.net/gh/szbgit/szbgit.github.io/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="萧易寒" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.1.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="萧易寒" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -525,11 +525,11 @@ spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202204252206106.png"></p>
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://lovegit.oss-cn-hangzhou.aliyuncs.com/blog/202208052006112.png"></p>
 <h2 id="配置日志"><a href="#配置日志" class="headerlink" title="配置日志"></a>配置日志</h2><pre class=" language-xml"><code class="language-xml">#配置日志  log-impl:日志实现
 mybatis-plus.configuration.log-impl=org.apache.ibatis.logging.stdout.StdOutImpl
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202204252207640.png" alt="img"></p>
+<p><img src="https://lovegit.oss-cn-hangzhou.aliyuncs.com/blog/202208052008539.png"></p>
 <h2 id="CRUD扩展"><a href="#CRUD扩展" class="headerlink" title="CRUD扩展"></a>CRUD扩展</h2><h3 id="Insert"><a href="#Insert" class="headerlink" title="Insert"></a>Insert</h3><pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Test</span><span class="token comment" spellcheck="true">//测试插入</span>
 <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">insertTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
     User user <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -541,7 +541,7 @@ mybatis-plus.configuration.log-impl=org.apache.ibatis.logging.stdout.StdOutImpl
     System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//通过日志发现id会自动回填</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202204252209755.png" alt="img"></p>
+<p><img src="https://lovegit.oss-cn-hangzhou.aliyuncs.com/blog/202208052009775.png"></p>
 <blockquote>
 <p><strong>数据库插入的id的默认值为:全局的唯—id</strong></p>
 </blockquote>
@@ -574,7 +574,7 @@ mybatis-plus.configuration.log-impl=org.apache.ibatis.logging.stdout.StdOutImpl
 <p><strong>我们需要配置主键自增</strong></p>
 <ul>
 <li>在实体类字段上配置<code>@TableId(type = IdType.AUTO)</code></li>
-<li>数据库字段一定是自增<br><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202204252209166.png" alt="img"><br><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202204252358461.png" alt="img"></li>
+<li>数据库字段一定是自增<br><img src="https://lovegit.oss-cn-hangzhou.aliyuncs.com/blog/202208052010077.png"><br><img src="https://lovegit.oss-cn-hangzhou.aliyuncs.com/blog/202208052011025.png"></li>
 </ul>
 <blockquote>
 <p>*<strong>手动输入：INPUT*</strong> 就需要自己写id</p>
@@ -582,7 +582,6 @@ mybatis-plus.configuration.log-impl=org.apache.ibatis.logging.stdout.StdOutImpl
 <ul>
 <li>在实体类字段上配置<code>@TableId(type = IdType.INPUT)</code></li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202204252210915.png" alt="img"></p>
 <h3 id="Update"><a href="#Update" class="headerlink" title="Update"></a>Update</h3><pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Test</span><span class="token comment" spellcheck="true">//测试更新</span>
 <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">updateTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
     User user <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -595,22 +594,22 @@ mybatis-plus.configuration.log-impl=org.apache.ibatis.logging.stdout.StdOutImpl
     System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202204252210652.png" alt="img"><br><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202204252358142.png" alt="img"></p>
+<p><img src="https://lovegit.oss-cn-hangzhou.aliyuncs.com/blog/202208052017782.png"></p>
 <h3 id="自动填充"><a href="#自动填充" class="headerlink" title="自动填充"></a>自动填充</h3><p>创建时间、更改时间！ 这些操作一般都是自动化完成，我们不希望手动更新</p>
 <p>阿里巴巴开发手册︰几乎所有的表都要配置 gmt_create、gmt_modified ！而且需要自动化</p>
 <blockquote>
 <p>方式一：数据库级别（工作中不允许修改数据库级别）</p>
 </blockquote>
-<p>1、在表中增加字段：create_time,update_time<br><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202204252210283.png" alt="img"></p>
+<p>1、在表中增加字段：create_time,update_time</p>
 <p>2、再次测试插入或更新方法，我们需要在实体类中同步！</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">private</span> Date createTime<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//驼峰命名</span>
 <span class="token keyword">private</span> Date updateTime<span class="token punctuation">;</span>
 </code></pre>
-<p>3、查看结果<br><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202204252211976.png" alt="img"></p>
+<p>3、查看结果<br><img src="https://lovegit.oss-cn-hangzhou.aliyuncs.com/blog/202208052019090.png"></p>
 <blockquote>
 <p>方式二：代码级别</p>
 </blockquote>
-<p>1、删除数据库的默认值，更新操作！<br><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202204252211389.png" alt="img"></p>
+<p>1、删除数据库的默认值，更新操作！</p>
 <p>2、实体类字段属性上需要增加注解</p>
 <pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//字段  字段添加填充内容</span>
 <span class="token annotation punctuation">@TableField</span><span class="token punctuation">(</span>fill <span class="token operator">=</span> FieldFill<span class="token punctuation">.</span>INSERT<span class="token punctuation">)</span><span class="token comment" spellcheck="true">//value = ("create_time"),</span>
@@ -658,7 +657,6 @@ mybatis-plus.configuration.log-impl=org.apache.ibatis.logging.stdout.StdOutImpl
     System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202204252212938.png" alt="img"></p>
 <h3 id="乐观锁-amp-悲观锁"><a href="#乐观锁-amp-悲观锁" class="headerlink" title="乐观锁&amp;悲观锁"></a>乐观锁&amp;悲观锁</h3><blockquote>
 <p>乐观锁：顾名思义十分乐观,他总是认为不会出现问题,无论干什么都不上锁!如果出现了问题,再次更新值测试</p>
 <p>悲观锁：顾名思义十分悲观,他总是认为出现问题,无论干什么都会上锁!再去操作!</p>
@@ -681,7 +679,7 @@ where id <span class="token operator">=</span> <span class="token number">1</spa
 <blockquote>
 <p>测试一下Mybatis-Plus乐观锁插件</p>
 </blockquote>
-<p>1、给数据库中增加version字段<br><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202204252212676.png" alt="img"></p>
+<p>1、给数据库中增加version字段</p>
 <p>2、实体类加对应的字段</p>
 <pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Version</span><span class="token comment" spellcheck="true">//乐观锁version注解</span>
 <span class="token keyword">private</span> Integer version<span class="token punctuation">;</span>
@@ -714,8 +712,7 @@ where id <span class="token operator">=</span> <span class="token number">1</spa
     userMapper<span class="token punctuation">.</span><span class="token function">updateById</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202204252214552.png" alt="img"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202204252214616.png" alt="img"></p>
+<p><img src="https://lovegit.oss-cn-hangzhou.aliyuncs.com/blog/202208052021402.png"></p>
 <ul>
 <li>失败</li>
 </ul>
@@ -734,8 +731,6 @@ where id <span class="token operator">=</span> <span class="token number">1</spa
     userMapper<span class="token punctuation">.</span><span class="token function">updateById</span><span class="token punctuation">(</span>user1<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//如果没有乐观锁就会覆盖插队线程的值</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202204252214102.png" alt="img"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202204252359736.png" alt="img"></p>
 <h3 id="Select"><a href="#Select" class="headerlink" title="Select"></a>Select</h3><ul>
 <li>通过id查询单个用户</li>
 </ul>
@@ -745,7 +740,6 @@ where id <span class="token operator">=</span> <span class="token number">1</spa
     System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202204252215655.png" alt="img"></p>
 <ul>
 <li>通过id查询多个用户</li>
 </ul>
@@ -756,7 +750,6 @@ where id <span class="token operator">=</span> <span class="token number">1</spa
     <span class="token comment" spellcheck="true">//System.out.println(users);</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202204252215110.png" alt="img"><br><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202204252215599.png" alt="img"></p>
 <ul>
 <li>条件查询 通过map封装</li>
 </ul>
@@ -770,7 +763,6 @@ where id <span class="token operator">=</span> <span class="token number">1</spa
     users<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>System<span class="token punctuation">.</span>out<span class="token operator">:</span><span class="token operator">:</span>println<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202204252216590.png" alt="img"><br><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202204252228407.png" alt="img"></p>
 <h3 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h3><p>分页在网站的使用十分之多！</p>
 <p>1、原始的limit分页</p>
 <p>2、pageHelper第三方插件</p>
@@ -796,11 +788,9 @@ where id <span class="token operator">=</span> <span class="token number">1</spa
     System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"总页数==>"</span><span class="token operator">+</span>page<span class="token punctuation">.</span><span class="token function">getTotal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202204252216528.png" alt="img"></p>
 <h3 id="Delete"><a href="#Delete" class="headerlink" title="Delete"></a>Delete</h3><blockquote>
 <p>基本的删除任务：</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202204252232738.png" alt="img"></p>
 <pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Test</span>
 <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testDeleteById</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
     userMapper<span class="token punctuation">.</span><span class="token function">deleteById</span><span class="token punctuation">(</span>1359507762519068681L<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -827,7 +817,6 @@ where id <span class="token operator">=</span> <span class="token number">1</spa
 <blockquote>
 <p>1、在数据表中增加一个deleted字段</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202204252233878.png" alt="img"></p>
 <blockquote>
 <p>2、实体类中添加对应属性</p>
 </blockquote>
@@ -846,10 +835,8 @@ where id <span class="token operator">=</span> <span class="token number">1</spa
 <blockquote>
 <p>4、测试一下删除</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202204252253587.png" alt="img"></p>
 <p>发现： 记录还在，deleted变为1</p>
 <p>再次测试查询被删除的用户，发现查询为空</p>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202204252253683.png" alt="img"></p>
 <p><strong>以上所有的CRUD及其扩展操作，我们都必须精通掌握！会大大提高工作写项目的效率！</strong></p>
 <h2 id="性能分析插件"><a href="#性能分析插件" class="headerlink" title="性能分析插件"></a>性能分析插件</h2><p>我们在平时的开发中，会遇到一些满Sql。测试、druid···</p>
 <p>MybatisPlus也提供了性能分析插件，如果超过这个时间就停止运行！</p>
@@ -878,7 +865,7 @@ spring.profiles.active=dev
     userList<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>System<span class="token punctuation">.</span>out<span class="token operator">:</span><span class="token operator">:</span>println<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/szbgit/static//img/202204252254834.png" alt="img"></p>
+<p><img src="https://lovegit.oss-cn-hangzhou.aliyuncs.com/blog/202208052025975.png"></p>
 <p>使用性能分析插件，可以帮助我们提高效率！、</p>
 <h2 id="条件构造器"><a href="#条件构造器" class="headerlink" title="条件构造器"></a>条件构造器</h2><p><strong>十分重要：Wrapper</strong> 记住查看输出的SQL进行分析</p>
 <blockquote>
