@@ -1791,18 +1791,17 @@ select * from teacher where id = #{id}
 <p>5、尽量使用Log4j，通过日志来查看自己的错误</p>
 <p>一对多和多对一对于很多人来说是难点，一定要大量的做练习理解！</p>
 <h2 id="9-动态SQL"><a href="#9-动态SQL" class="headerlink" title="9.动态SQL"></a>9.动态SQL</h2><h3 id="9-1-介绍"><a href="#9-1-介绍" class="headerlink" title="9.1 介绍"></a>9.1 介绍</h3><p>什么是动态SQL：<strong>动态SQL指的是根据不同的查询条件 , 生成不同的Sql语句.</strong></p>
-<pre><code>官网描述：
-MyBatis 的强大特性之一便是它的动态 SQL。如果你有使用 JDBC 或其它类似框架的经验，你就能体会到根据不同条件拼接 SQL 语句的痛苦。例如拼接时要确保不能忘记添加必要的空格，还要注意去掉列表最后一个列名的逗号。利用动态 SQL 这一特性可以彻底摆脱这种痛苦。
-虽然在以前使用动态 SQL 并非一件易事，但正是 MyBatis 提供了可以被用在任意 SQL 映射语句中的强大的动态 SQL 语言得以改进这种情形。
-动态 SQL 元素和 JSTL 或基于类似 XML 的文本处理器相似。在 MyBatis 之前的版本中，有很多元素需要花时间了解。MyBatis 3 大大精简了元素种类，现在只需学习原来一半的元素便可。MyBatis 采用功能强大的基于 OGNL 的表达式来淘汰其它大部分元素。
-
-  -------------------------------
-  - if
-  - choose (when, otherwise)
-  - trim (where, set)
-  - foreach
-  -------------------------------
-</code></pre>
+<blockquote>
+<p>官网描述：<br>MyBatis 的强大特性之一便是它的动态 SQL。如果你有使用 JDBC 或其它类似框架的经验，你就能体会到根据不同条件拼接 SQL 语句的痛苦。例如拼接时要确保不能忘记添加必要的空格，还要注意去掉列表最后一个列名的逗号。利用动态 SQL 这一特性可以彻底摆脱这种痛苦。<br>虽然在以前使用动态 SQL 并非一件易事，但正是 MyBatis 提供了可以被用在任意 SQL 映射语句中的强大的动态 SQL 语言得以改进这种情形。<br>动态 SQL 元素和 JSTL 或基于类似 XML 的文本处理器相似。在 MyBatis 之前的版本中，有很多元素需要花时间了解。MyBatis 3 大大精简了元素种类，现在只需学习原来一半的元素便可。MyBatis 采用功能强大的基于 OGNL 的表达式来淘汰其它大部分元素。</p>
+<hr>
+<ul>
+<li>if</li>
+<li>choose (when, otherwise)</li>
+<li>trim (where, set)</li>
+<li>foreach</li>
+</ul>
+<hr>
+</blockquote>
 <p>我们之前写的 SQL 语句都比较简单，如果有比较复杂的业务，我们需要写复杂的 SQL 语句，往往需要拼接，而拼接 SQL ，稍微不注意，由于引号，空格等缺失可能都会导致错误。</p>
 <p>那么怎么去解决这个问题呢？这就要使用 mybatis 动态SQL，通过 if, choose, when, otherwise, trim, where, set, foreach等标签，可组合成非常灵活的SQL语句，从而在提高 SQL 语句的准确性的同时，也大大提高了开发人员的效率。</p>
 <h3 id="9-2-搭建环境"><a href="#9-2-搭建环境" class="headerlink" title="9.2 搭建环境"></a>9.2 搭建环境</h3><p><strong>新建一个数据库表：blog</strong></p>
@@ -2448,7 +2447,7 @@ User <span class="token function">queryUserById</span><span class="token punctua
 <div id="article-share">
 
     
-    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <div class="social-share" data-sites="qq,qzone,wechat,weibo" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
     <script src="https://lovegit.oss-cn-hangzhou.aliyuncs.com/blog/source/libs/share/js/social-share.min.js"></script>
     
 
@@ -2718,7 +2717,7 @@ User <span class="token function">queryUserById</span><span class="token punctua
 
         var selection = window.getSelection();
         // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('240')) {
+        if (('' + selection).length < Number.parseInt('500')) {
             return;
         }
 
@@ -3177,11 +3176,9 @@ $(function () {
     
 
     
-    
-    <script type="text/javascript" size="150" alpha='0.6'
-        zIndex="-1" src="https://lovegit.oss-cn-hangzhou.aliyuncs.com/blog/source/libs/background/ribbon.min.js" async="async"></script>
-    
 
+    
+    <script type="text/javascript" src="https://lovegit.oss-cn-hangzhou.aliyuncs.com/blog/source/libs/background/ribbon-dynamic.js" async="async"></script>
     
 
     
