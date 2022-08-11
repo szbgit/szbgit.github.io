@@ -29,9 +29,9 @@
 
     <script src="https://lovegit.oss-cn-hangzhou.aliyuncs.com/blog/source/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="萧易寒" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.1.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="萧易寒" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -2508,8 +2508,9 @@ country<span class="token punctuation">.</span><span class="token function">setC
 <span class="token comment" spellcheck="true">// 执行查询</span>
 countryMapper<span class="token punctuation">.</span><span class="token function">updateByExampleSelective</span><span class="token punctuation">(</span>country<span class="token punctuation">,</span> example<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<pre><code>    我们看CountryMapper接口，可以看到有 updateByExample和updateByExampleSelective。 这两个方法的区别是，当对象的属性为空的时候，第一个方法会将值更新为null , 第二个方法不会更新null属性的字段。 通过Example一般都是批量操作，由于country表存在主键id,不能被批量更新， 因此要使用updateByExampleSelective方法进行测试。
-</code></pre>
+<blockquote>
+<p>我们看CountryMapper接口，可以看到有 updateByExample和updateByExampleSelective。 这两个方法的区别是，当对象的属性为空的时候，第一个方法会将值更新为null , 第二个方法不会更新null属性的字段。 通过Example一般都是批量操作，由于country表存在主键id,不能被批量更新， 因此要使用updateByExampleSelective方法进行测试。</p>
+</blockquote>
 <p>deleteByExample+countByExample</p>
 <pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 创建 Example 对象</span>
 CountryExample example <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">CountryExample</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
