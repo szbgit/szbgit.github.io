@@ -6,7 +6,7 @@
   <link href="https://szbgit.github.io/atom.xml" rel="self"/>
   
   <link href="https://szbgit.github.io/"/>
-  <updated>2022-08-06T02:29:14.221Z</updated>
+  <updated>2022-08-11T13:45:18.854Z</updated>
   <id>https://szbgit.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://szbgit.github.io/2022/050837538.html"/>
     <id>https://szbgit.github.io/2022/050837538.html</id>
     <published>2022-05-08T04:34:04.000Z</published>
-    <updated>2022-08-06T02:29:14.221Z</updated>
+    <updated>2022-08-11T13:45:18.854Z</updated>
     
     
       
@@ -93,6 +93,56 @@
   </entry>
   
   <entry>
+    <title>MySQL练习题</title>
+    <link href="https://szbgit.github.io/2021/011340186.html"/>
+    <id>https://szbgit.github.io/2021/011340186.html</id>
+    <published>2021-01-13T15:45:36.000Z</published>
+    <updated>2022-08-11T13:06:32.696Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;练习数据&quot;&gt;&lt;a href=&quot;#练习数据&quot; class=&quot;headerlink&quot; title=&quot;练习数据&quot;&gt;&lt;/a&gt;练习数据&lt;/h1&gt;&lt;h2 id=&quot;数据表&quot;&gt;&lt;a href=&quot;#数据表&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="SQL" scheme="https://szbgit.github.io/categories/SQL/"/>
+    
+    
+    <category term="MySQL" scheme="https://szbgit.github.io/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java瞎记</title>
+    <link href="https://szbgit.github.io/2020/120127928.html"/>
+    <id>https://szbgit.github.io/2020/120127928.html</id>
+    <published>2020-12-01T13:39:53.000Z</published>
+    <updated>2022-08-11T13:03:49.982Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-时间API&quot;&gt;&lt;a href=&quot;#1-时间API&quot; class=&quot;headerlink&quot; title=&quot;1. 时间API&quot;&gt;&lt;/a&gt;1.</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://szbgit.github.io/categories/Java/"/>
+    
+    
+    <category term="Api" scheme="https://szbgit.github.io/tags/Api/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JavaScript快速入门</title>
     <link href="https://szbgit.github.io/2020/100525247.html"/>
     <id>https://szbgit.github.io/2020/100525247.html</id>
@@ -114,6 +164,33 @@
     
     
     <category term="JavaScript" scheme="https://szbgit.github.io/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HashSet使用详解</title>
+    <link href="https://szbgit.github.io/2020/050131033.html"/>
+    <id>https://szbgit.github.io/2020/050131033.html</id>
+    <published>2020-05-01T12:36:49.000Z</published>
+    <updated>2022-08-11T12:57:28.384Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;HashSet 基于 HashMap 来实现的，是一个不允许有重复元素的集合。&lt;/p&gt;
+&lt;p&gt;HashSet</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://szbgit.github.io/categories/Java/"/>
+    
+    
+    <category term="HashSet" scheme="https://szbgit.github.io/tags/HashSet/"/>
     
   </entry>
   
@@ -141,31 +218,6 @@
     
     
     <category term="Typora" scheme="https://szbgit.github.io/tags/Typora/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://szbgit.github.io/2019/082716107.html"/>
-    <id>https://szbgit.github.io/2019/082716107.html</id>
-    <published>2019-08-27T08:51:49.000Z</published>
-    <updated>2022-04-25T16:09:03.302Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="Java" scheme="https://szbgit.github.io/categories/Java/"/>
-    
-    
-    <category term="Hello World" scheme="https://szbgit.github.io/tags/Hello-World/"/>
     
   </entry>
   

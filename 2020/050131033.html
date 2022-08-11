@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Typora的使用手册, 萧易寒">
+    <meta name="keywords" content="HashSet使用详解, 萧易寒">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Typora的使用手册 | 萧易寒</title>
+    <title>HashSet使用详解 | 萧易寒</title>
     <link rel="icon" type="image/png" href="https://lovegit.oss-cn-hangzhou.aliyuncs.com/blog/source/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://lovegit.oss-cn-hangzhou.aliyuncs.com/blog/source/libs/awesome/css/all.css">
@@ -228,12 +228,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://lovegit.oss-cn-hangzhou.aliyuncs.com/blog/source/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://lovegit.oss-cn-hangzhou.aliyuncs.com/blog/source/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Typora的使用手册</h1>
+                    <h1 class="description center-align post-title">HashSet使用详解</h1>
                 </div>
             </div>
         </div>
@@ -349,8 +349,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Typora/">
-                                <span class="chip bg-color">Typora</span>
+                            <a href="/tags/HashSet/">
+                                <span class="chip bg-color">HashSet</span>
                             </a>
                         
                     </div>
@@ -361,8 +361,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%BD%AF%E4%BB%B6/" class="post-category">
-                                软件
+                            <a href="/categories/Java/" class="post-category">
+                                Java
                             </a>
                         
                     </div>
@@ -374,7 +374,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-09-01
+                    2020-05-01
                 </div>
                 
 
@@ -383,7 +383,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    856
                 </div>
                 
 
@@ -410,212 +410,185 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>莫等闲，白了少年头，空悲切！ </p>
-<p>个人总结，仅供参考，如有错误，还望指正，勿喷！</p>
-<h2 id="标题的使用"><a href="#标题的使用" class="headerlink" title="标题的使用"></a>标题的使用</h2><h3 id="标题的使用格式"><a href="#标题的使用格式" class="headerlink" title="标题的使用格式"></a>标题的使用格式</h3><table>
+                <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><blockquote>
+<p>HashSet 基于 HashMap 来实现的，是一个不允许有重复元素的集合。</p>
+<p>HashSet 允许有 null 值。</p>
+<p>HashSet 是无序的，即不会记录插入的顺序。</p>
+<p>HashSet 不是线程安全的， 如果多个线程尝试同时修改 HashSet，则最终结果是不确定的。 必须在多线程访问时显式同步对 HashSet 的并发访问。</p>
+<p>HashSet 实现了 Set 接口。</p>
+</blockquote>
+<h2 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h2><p>HashSet 中的元素实际上是对象，一些常见的基本类型可以使用它的包装类。</p>
+<p>基本类型对应的包装类表如下：</p>
+<table>
 <thead>
 <tr>
-<th>标准写法</th>
-<th>快捷方式</th>
+<th>基本类型</th>
+<th>引用类型</th>
 </tr>
 </thead>
 <tbody><tr>
-<td># 一阶标题</td>
-<td>Ctrl+1</td>
+<td>boolean</td>
+<td>Boolean</td>
 </tr>
 <tr>
-<td>## 一阶标题</td>
-<td>Ctrl+2</td>
+<td>byte</td>
+<td>Byte</td>
 </tr>
 <tr>
-<td>### 一阶标题</td>
-<td>Ctrl+3</td>
+<td>short</td>
+<td>Short</td>
 </tr>
 <tr>
-<td>#### 一阶标题</td>
-<td>Ctrl+4</td>
+<td>int</td>
+<td>Integer</td>
 </tr>
 <tr>
-<td>##### 一阶标题</td>
-<td>Ctrl+5</td>
+<td>long</td>
+<td>Long</td>
 </tr>
 <tr>
-<td>###### 一阶标题</td>
-<td>Ctrl+6</td>
+<td>float</td>
+<td>Float</td>
+</tr>
+<tr>
+<td>double</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>char</td>
+<td>Character</td>
 </tr>
 </tbody></table>
-<h3 id="标题Typora显示形式"><a href="#标题Typora显示形式" class="headerlink" title="标题Typora显示形式"></a>标题Typora显示形式</h3><p><img src="https://lovegit.oss-cn-hangzhou.aliyuncs.com/blog/202208051943283.jpg" alt="1"></p>
-<h2 id="文本居中"><a href="#文本居中" class="headerlink" title="文本居中"></a>文本居中</h2><h3 id="文本居中使用格式"><a href="#文本居中使用格式" class="headerlink" title="文本居中使用格式"></a>文本居中使用格式</h3><pre class=" language-html"><code class="language-html">#代码格式
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>center</span><span class="token punctuation">></span></span>这是要居中的文本内容<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>center</span><span class="token punctuation">></span></span>
+<p>HashSet 类位于 java.util 包中，使用前需要引入它</p>
+<p>以下实例创建一个 HashSet 对象 sites，用于保存字符串元素</p>
+<p>语法格式如下：</p>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 引入 HashSet 类   </span>
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>HashSet<span class="token punctuation">;</span>
+
+HashSet<span class="token operator">&lt;</span>String<span class="token operator">></span> sites <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h2><h3 id="下划线使用格式"><a href="#下划线使用格式" class="headerlink" title="下划线使用格式"></a>下划线使用格式</h3><pre class=" language-html"><code class="language-html">#代码格式
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>u</span><span class="token punctuation">></span></span>下划线的内容<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>u</span><span class="token punctuation">></span></span>
-或者快捷键Ctrl+U
-</code></pre>
-<h3 id="下划线在Typora显示形式是"><a href="#下划线在Typora显示形式是" class="headerlink" title="下划线在Typora显示形式是"></a>下划线在Typora显示形式是</h3><p><u>这是我的下划线</u></p>
-<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><h3 id="删除线使用格式"><a href="#删除线使用格式" class="headerlink" title="删除线使用格式"></a>删除线使用格式</h3><pre class=" language-html"><code class="language-html">#代码格式
-~~删除线的内容~~
-</code></pre>
-<h3 id="删除线在Typora显示形式是"><a href="#删除线在Typora显示形式是" class="headerlink" title="删除线在Typora显示形式是"></a>删除线在Typora显示形式是</h3><p><del>删除线的内容</del></p>
-<h2 id="字体加粗"><a href="#字体加粗" class="headerlink" title="字体加粗"></a>字体加粗</h2><h3 id="字体加粗使用格式"><a href="#字体加粗使用格式" class="headerlink" title="字体加粗使用格式"></a>字体加粗使用格式</h3><pre class=" language-html"><code class="language-html">#代码格式
-**加粗字体**
-或者快捷键Ctrl+B
-</code></pre>
-<h3 id="字体加粗在Typora显示形式是"><a href="#字体加粗在Typora显示形式是" class="headerlink" title="字体加粗在Typora显示形式是"></a>字体加粗在Typora显示形式是</h3><p><strong>加粗字体</strong></p>
-<h2 id="字体倾斜"><a href="#字体倾斜" class="headerlink" title="字体倾斜"></a>字体倾斜</h2><h3 id="字体倾斜使用格式"><a href="#字体倾斜使用格式" class="headerlink" title="字体倾斜使用格式"></a>字体倾斜使用格式</h3><pre class=" language-html"><code class="language-html">#代码格式
-*字体倾斜了*
-或者快捷键Ctrl+I
-</code></pre>
-<p><em>倾斜了看这里  look here</em></p>
-<h2 id="图片的插入"><a href="#图片的插入" class="headerlink" title="图片的插入"></a>图片的插入</h2><p>方式有很多种，我只喜欢一个。直接把图床里图片的URL复制粘贴到Typora里。</p>
-<h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><h3 id="超链接使用格式"><a href="#超链接使用格式" class="headerlink" title="超链接使用格式"></a>超链接使用格式</h3><pre class=" language-html"><code class="language-html">#代码格式
-第一种：&lt;http://www.simba.com>
-第二种：快捷键Ctrl+K
-[自定义内容](超链接地址)
-例如：[小唯的博客](www.szbgit.github.io)
-</code></pre>
-<h3 id="超链接在Typora显示形式是"><a href="#超链接在Typora显示形式是" class="headerlink" title="超链接在Typora显示形式是"></a>超链接在Typora显示形式是</h3><p>例如：<a target="_blank" rel="noopener" href="http://lovegit.top/">萧易寒的博客</a></p>
-<p>注：必须以http开头</p>
-<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><h2 id="代码区域的使用格式"><a href="#代码区域的使用格式" class="headerlink" title="代码区域的使用格式"></a>代码区域的使用格式</h2><pre class=" language-html"><code class="language-html">#代码格式
-```
-代码内容
-```
-</code></pre>
-<h3 id="代码区域在Typora中显示形式"><a href="#代码区域在Typora中显示形式" class="headerlink" title="代码区域在Typora中显示形式"></a>代码区域在Typora中显示形式</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">test</span><span class="token punctuation">{</span>
-  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"欢迎来到小唯的博客"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h2 id="添加元素"><a href="#添加元素" class="headerlink" title="添加元素"></a>添加元素</h2><p>HashSet 类提供类很多有用的方法，添加元素可以使用 add() 方法</p>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 引入 HashSet 类    </span>
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>HashSet<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">RunoobTest</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  HashSet<span class="token operator">&lt;</span>String<span class="token operator">></span> sites <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token operator">&lt;</span>String<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sites<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Google"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sites<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Runoob"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sites<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Taobao"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sites<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Zhihu"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sites<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Runoob"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 重复的元素不会被添加</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>sites<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 执行以上代码，输出结果如下：</span>
+<span class="token comment" spellcheck="true">// [Google, Runoob, Zhihu, Taobao]</span>
 </code></pre>
-<h2 id="表格的使用"><a href="#表格的使用" class="headerlink" title="表格的使用"></a>表格的使用</h2><h3 id="表格的两种使用格式"><a href="#表格的两种使用格式" class="headerlink" title="表格的两种使用格式"></a>表格的两种使用格式</h3><p>第一种：快捷键 <strong>Ctrl+T</strong>，会自动跳出设置行和列的设置框，如下图</p>
-<p><img src="https://lovegit.oss-cn-hangzhou.aliyuncs.com/blog/202208051948457.jpg" alt="1"></p>
-<p>第二种：</p>
-<pre class=" language-html"><code class="language-html">#代码格式
-|国籍|省份|市区|
+<p><strong>注</strong>：在上面的实例中，Runoob 被添加了两次，它在集合中也只会出现一次，因为集合中的每个元素都必须是唯一的。</p>
+<h2 id="判断元素是否存在"><a href="#判断元素是否存在" class="headerlink" title="判断元素是否存在"></a>判断元素是否存在</h2><p>使用 contains() 方法来判断元素是否存在于集合当中</p>
+<h3 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h3><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 引入 HashSet 类    </span>
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>HashSet<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">RunoobTest</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  HashSet<span class="token operator">&lt;</span>String<span class="token operator">></span> sites <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token operator">&lt;</span>String<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sites<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Google"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sites<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Runoob"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sites<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Taobao"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sites<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Zhihu"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sites<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Runoob"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 重复的元素不会被添加</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>sites<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">"Taobao"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 执行以上代码，输出结果如下：</span>
+<span class="token comment" spellcheck="true">// true</span>
 </code></pre>
-<h3 id="表格在Typora中显示形式"><a href="#表格在Typora中显示形式" class="headerlink" title="表格在Typora中显示形式"></a>表格在Typora中显示形式</h3><table>
-<thead>
-<tr>
-<th align="left">id</th>
-<th align="left">username</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">1</td>
-<td align="left">1</td>
-</tr>
-</tbody></table>
-<h2 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h2><h3 id="任务列表使用格式"><a href="#任务列表使用格式" class="headerlink" title="任务列表使用格式"></a>任务列表使用格式</h3><pre class=" language-html"><code class="language-html">#代码格式
-- [ ] 文字 （注：注意[ ]中间用空格隔开）
-多个任务另起一行写，一行一个
-任务被选中写法 - [X] 大小写均可
-也可以直接使用段落功能里提供的快捷生成
+<h2 id="删除一个元素"><a href="#删除一个元素" class="headerlink" title="删除一个元素"></a>删除一个元素</h2><p>使用 remove() 方法来删除集合中的元素</p>
+<h3 id="实例-2"><a href="#实例-2" class="headerlink" title="实例"></a>实例</h3><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 引入 HashSet 类    </span>
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>HashSet<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">RunoobTest</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  HashSet<span class="token operator">&lt;</span>String<span class="token operator">></span> sites <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token operator">&lt;</span>String<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sites<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Google"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sites<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Runoob"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sites<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Taobao"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sites<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Zhihu"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sites<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Runoob"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">// 重复的元素不会被添加</span>
+    sites<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token string">"Taobao"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 删除元素，删除成功返回 true，否则为 false</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>sites<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 执行以上代码，输出结果如下：</span>
+<span class="token comment" spellcheck="true">// [Google, Runoob, Zhihu]</span>
 </code></pre>
-<h3 id="任务列表在Typora中的显示形式"><a href="#任务列表在Typora中的显示形式" class="headerlink" title="任务列表在Typora中的显示形式"></a>任务列表在Typora中的显示形式</h3><ul>
-<li>JAVA</li>
-<li>C++</li>
-</ul>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="列表的使用格式"><a href="#列表的使用格式" class="headerlink" title="列表的使用格式"></a>列表的使用格式</h3><pre class=" language-html"><code class="language-html">#代码格式
-+ 、- 、* 创建无序列，任意数字开始+空格创建有序列表
+<h2 id="删除所有元素"><a href="#删除所有元素" class="headerlink" title="删除所有元素"></a>删除所有元素</h2><p>删除所有元素可以使用 clear 方法</p>
+<h3 id="实例-3"><a href="#实例-3" class="headerlink" title="实例"></a>实例</h3><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 引入 HashSet 类   </span>
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>HashSet<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">RunoobTest</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  HashSet<span class="token operator">&lt;</span>String<span class="token operator">></span> sites <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token operator">&lt;</span>String<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sites<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Google"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sites<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Runoob"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sites<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Taobao"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sites<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Zhihu"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sites<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Runoob"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">// 重复的元素不会被添加</span>
+    sites<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>sites<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 执行以上代码，输出结果如下：</span>
+<span class="token comment" spellcheck="true">// []</span>
 </code></pre>
-<h3 id="列表在Typora中的显示形式"><a href="#列表在Typora中的显示形式" class="headerlink" title="列表在Typora中的显示形式"></a>列表在Typora中的显示形式</h3><ol>
-<li>java</li>
-<li>C</li>
-<li>C++</li>
-</ol>
-<h2 id="数学表达式"><a href="#数学表达式" class="headerlink" title="数学表达式"></a>数学表达式</h2><p>Typora支持加入用LaTeX写成的数学公式，并且在软件界面下用MathJax直接渲染。</p>
-<p>数学公式分为两种：</p>
-<p>一种是行内公式(inline math)，可以在偏好设置中单独打开，由一个美元符号$将公式围起来；</p>
-<p>一种是行外公式，直接按Ctrl+Shift+M；</p>
-<h2 id="水平分割线"><a href="#水平分割线" class="headerlink" title="水平分割线"></a>水平分割线</h2><h3 id="水平分割线的使用格式"><a href="#水平分割线的使用格式" class="headerlink" title="水平分割线的使用格式"></a>水平分割线的使用格式</h3><pre class=" language-html"><code class="language-html">#代码格式
-***或者- - -
+<h2 id="计算大小"><a href="#计算大小" class="headerlink" title="计算大小"></a>计算大小</h2><p>如果要计算 HashSet 中的元素数量可以使用 size() 方法</p>
+<h3 id="实例-4"><a href="#实例-4" class="headerlink" title="实例"></a>实例</h3><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 引入 HashSet 类    </span>
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>HashSet<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">RunoobTest</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  HashSet<span class="token operator">&lt;</span>String<span class="token operator">></span> sites <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token operator">&lt;</span>String<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sites<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Google"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sites<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Runoob"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sites<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Taobao"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sites<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Zhihu"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sites<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Runoob"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">// 重复的元素不会被添加</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>sites<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 执行以上代码，输出结果如下：</span>
+<span class="token comment" spellcheck="true">// 4</span>
 </code></pre>
-<h3 id="水平分割线在Typora中显示形式"><a href="#水平分割线在Typora中显示形式" class="headerlink" title="水平分割线在Typora中显示形式"></a>水平分割线在Typora中显示形式</h3><hr>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><h3 id="引用的使用格式"><a href="#引用的使用格式" class="headerlink" title="引用的使用格式"></a>引用的使用格式</h3><pre class=" language-html"><code class="language-html">#代码格式
->+空格  >后一个空格然后写内容
+<h2 id="迭代-HashSet"><a href="#迭代-HashSet" class="headerlink" title="迭代 HashSet"></a>迭代 HashSet</h2><p>可以使用 for-each 来迭代 HashSet 中的元素</p>
+<h3 id="实例-5"><a href="#实例-5" class="headerlink" title="实例"></a>实例</h3><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 引入 HashSet 类    </span>
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>HashSet<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">RunoobTest</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  HashSet<span class="token operator">&lt;</span>String<span class="token operator">></span> sites <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token operator">&lt;</span>String<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sites<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Google"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sites<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Runoob"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sites<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Taobao"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sites<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Zhihu"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sites<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Runoob"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">// 重复的元素不会被添加</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>String i <span class="token operator">:</span> sites<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 执行以上代码，输出结果如下</span>
+<span class="token comment" spellcheck="true">// Google</span>
+<span class="token comment" spellcheck="true">// Runoob</span>
+<span class="token comment" spellcheck="true">// Zhihu</span>
+<span class="token comment" spellcheck="true">// Taobao</span>
 </code></pre>
-<h3 id="引用在Typora中的显示形式"><a href="#引用在Typora中的显示形式" class="headerlink" title="引用在Typora中的显示形式"></a>引用在Typora中的显示形式</h3><blockquote>
-<p>与天奋斗，其乐无穷！与地奋斗，其乐无穷！与人奋斗，其乐无穷！</p>
-</blockquote>
-<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><h3 id="注释的使用格式"><a href="#注释的使用格式" class="headerlink" title="注释的使用格式"></a>注释的使用格式</h3><pre class=" language-html"><code class="language-html">#代码格式
-要添加注释的文字[^注释内容]  自由的国家[1](内容)
-</code></pre>
-<h3 id="注释在Typora中显示形式"><a href="#注释在Typora中显示形式" class="headerlink" title="注释在Typora中显示形式"></a>注释在Typora中显示形式</h3><p>小唯<a href="https://szbgit.github.io/">1</a></p>
-<h2 id="表情"><a href="#表情" class="headerlink" title="表情"></a>表情</h2><h3 id="表情的使用格式"><a href="#表情的使用格式" class="headerlink" title="表情的使用格式"></a>表情的使用格式</h3><pre class=" language-html"><code class="language-html">#代码格式
-:单词 
-</code></pre>
-<h3 id="表情在Typora中的显示形式"><a href="#表情在Typora中的显示形式" class="headerlink" title="表情在Typora中的显示形式"></a>表情在Typora中的显示形式</h3><p>😃</p>
-<h2 id="Typora快捷键"><a href="#Typora快捷键" class="headerlink" title="Typora快捷键"></a>Typora快捷键</h2><table>
-<thead>
-<tr>
-<th align="left">快捷键</th>
-<th align="left">作用</th>
-<th align="left">快捷键</th>
-<th align="left">作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">Ctrl+1</td>
-<td align="left">一阶标题</td>
-<td align="left">Ctrl+B</td>
-<td align="left">字体加粗</td>
-</tr>
-<tr>
-<td align="left">Ctrl+2</td>
-<td align="left">二阶标题</td>
-<td align="left">Ctrl+I</td>
-<td align="left">字体倾斜</td>
-</tr>
-<tr>
-<td align="left">Ctrl+3</td>
-<td align="left">三阶标题</td>
-<td align="left">Ctrl+U</td>
-<td align="left">下划线</td>
-</tr>
-<tr>
-<td align="left">Ctrl+4</td>
-<td align="left">四阶标题</td>
-<td align="left">Ctrl+Home</td>
-<td align="left">返回Typora顶部</td>
-</tr>
-<tr>
-<td align="left">Ctrl+5</td>
-<td align="left">五阶标题</td>
-<td align="left">Ctrl+End</td>
-<td align="left">返回Typora底部</td>
-</tr>
-<tr>
-<td align="left">Ctrl+6</td>
-<td align="left">六阶标题</td>
-<td align="left">Ctrl+T</td>
-<td align="left">创建表格</td>
-</tr>
-<tr>
-<td align="left">Ctrl+L</td>
-<td align="left">选中某句话</td>
-<td align="left">Ctrl+K</td>
-<td align="left">创建超链接</td>
-</tr>
-<tr>
-<td align="left">Ctrl+D</td>
-<td align="left">选中某个单词</td>
-<td align="left">Ctrl+F</td>
-<td align="left">搜索</td>
-</tr>
-<tr>
-<td align="left">Ctrl+E</td>
-<td align="left">选中相同格式的文字</td>
-<td align="left">Ctrl+H</td>
-<td align="left">搜索并替换</td>
-</tr>
-<tr>
-<td align="left">Alt+Shift+5</td>
-<td align="left">删除线</td>
-<td align="left">Ctrl+Shift+I</td>
-<td align="left">插入图片</td>
-</tr>
-</tbody></table>
-<p>注：一些实体符号需要在实体符号之前加””才能够显示</p>
 
                 
             </div>
@@ -642,7 +615,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://szbgit.github.io/2019/090161485.html">https://szbgit.github.io/2019/090161485.html</a>
+                    <a href="https://szbgit.github.io/2020/050131033.html">https://szbgit.github.io/2020/050131033.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -680,8 +653,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Typora/">
-                                    <span class="chip bg-color">Typora</span>
+                                <a href="/tags/HashSet/">
+                                    <span class="chip bg-color">HashSet</span>
                                 </a>
                             
                         </div>
@@ -855,13 +828,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/050131033.html">
+                <a href="/2020/100525247.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://lovegit.oss-cn-hangzhou.aliyuncs.com/blog/source/medias/featureimages/18.jpg" class="responsive-img" alt="HashSet使用详解">
+                        <img src="https://lovegit.oss-cn-hangzhou.aliyuncs.com/blog/source/medias/featureimages/4.jpg" class="responsive-img" alt="JavaScript快速入门">
                         
-                        <span class="card-title">HashSet使用详解</span>
+                        <span class="card-title">JavaScript快速入门</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -872,14 +845,14 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-01
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-05
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java/" class="post-category">
-                                    Java
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
                                 </a>
                             
                             
@@ -889,8 +862,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/HashSet/">
-                        <span class="chip bg-color">HashSet</span>
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
                     </a>
                     
                 </div>
@@ -901,7 +874,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2019/090161485.html">
@@ -935,7 +908,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     

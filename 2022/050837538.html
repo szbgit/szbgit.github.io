@@ -30,9 +30,9 @@
     <script src="https://lovegit.oss-cn-hangzhou.aliyuncs.com/blog/source/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="萧易寒" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -383,14 +383,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    15.7k
+                    17.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    66 分
+                    73 分
                 </div>
                 
 
@@ -2371,6 +2371,193 @@ User <span class="token function">queryUserById</span><span class="token punctua
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ehcache</span><span class="token punctuation">></span></span>
 </code></pre>
 <p>合理的使用缓存，可以让我们程序的性能大大提升！</p>
+<h2 id="11-代码生成器"><a href="#11-代码生成器" class="headerlink" title="11.代码生成器"></a>11.代码生成器</h2><h3 id="11-1-配置文件"><a href="#11-1-配置文件" class="headerlink" title="11.1 配置文件"></a>11.1 配置文件</h3><pre class=" language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
+<span class="token doctype">&lt;!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd"></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>generatorConfiguration</span><span class="token punctuation">></span></span>
+    <span class="token comment" spellcheck="true">&lt;!--&lt;properties resource="application.properties" />--></span>
+    <span class="token comment" spellcheck="true">&lt;!-- mysql驱动的位置 这个是MySQL连接的jar包，你需要指定你自己计算机上的jar包的位置--></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>classPathEntry</span> <span class="token attr-name">location</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>E:\maven\repository\mysql\mysql-connector-java\5.1.46\mysql-connector-java-5.1.46.jar<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>context</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Tables<span class="token punctuation">"</span></span> <span class="token attr-name">targetRuntime</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>MyBatis3<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token comment" spellcheck="true">&lt;!-- 注释 --></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>commentGenerator</span><span class="token punctuation">></span></span>
+            <span class="token comment" spellcheck="true">&lt;!-- 是否生成注释带时间戳 --></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>suppressDate<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+            <span class="token comment" spellcheck="true">&lt;!-- 是否去除自动生成的注释 true：是 ： false:否 --></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>suppressAllComments<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>commentGenerator</span><span class="token punctuation">></span></span>
+
+        <span class="token comment" spellcheck="true">&lt;!-- JDBC连接 其中connectionURL后面的newtest改为你创建的数据库，紧跟在后面是数据库连接的账户和密码--></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>jdbcConnection</span>
+                <span class="token attr-name">driverClass</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>com.mysql.jdbc.Driver<span class="token punctuation">"</span></span>
+                <span class="token attr-name">connectionURL</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>jdbc:mysql://127.0.0.1:3306/test<span class="token punctuation">"</span></span>
+                <span class="token attr-name">userId</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>root<span class="token punctuation">"</span></span>
+                <span class="token attr-name">password</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>root<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>jdbcConnection</span><span class="token punctuation">></span></span>
+
+        <span class="token comment" spellcheck="true">&lt;!-- 非必需，类型处理器，在数据库类型和java类型之间的转换控制--></span>
+        <span class="token comment" spellcheck="true">&lt;!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer，为 true时把JDBC DECIMAL 和
+         NUMERIC 类型解析为java.math.BigDecimal --></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>javaTypeResolver</span><span class="token punctuation">></span></span>
+            <span class="token comment" spellcheck="true">&lt;!-- 是否使用bigDecimal， false可自动转化以下类型（Long, Integer, Short, etc.） --></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>forceBigDecimals<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>javaTypeResolver</span><span class="token punctuation">></span></span>
+
+        <span class="token comment" spellcheck="true">&lt;!-- 生成实体类地址 这里需要你改动，其中targetPackage需要根据你自己创建的目录进行改动 --></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>javaModelGenerator</span> <span class="token attr-name">targetPackage</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>com.study.study0726.entity<span class="token punctuation">"</span></span> <span class="token attr-name">targetProject</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>src/main/java<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token comment" spellcheck="true">&lt;!-- 从数据库返回的值被清理前后的空格 --></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>trimStrings<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+            <span class="token comment" spellcheck="true">&lt;!-- enableSubPackages:是否让schema作为包的后缀 --></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>enableSubPackages<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>javaModelGenerator</span><span class="token punctuation">></span></span>
+
+        <span class="token comment" spellcheck="true">&lt;!-- 生成mapper xml文件 这里不需要改动 --></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sqlMapGenerator</span> <span class="token attr-name">targetPackage</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>mapper<span class="token punctuation">"</span></span> <span class="token attr-name">targetProject</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>src/main/resources<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token comment" spellcheck="true">&lt;!-- enableSubPackages:是否让schema作为包的后缀 --></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>enableSubPackages<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sqlMapGenerator</span><span class="token punctuation">></span></span>
+
+        <span class="token comment" spellcheck="true">&lt;!-- 生成mapper xml对应Client   这里需要改动targetPackage，依据你自己的工程--></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>javaClientGenerator</span> <span class="token attr-name">targetPackage</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>com.study.study0726.mapper<span class="token punctuation">"</span></span> <span class="token attr-name">targetProject</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>src/main/java<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>XMLMAPPER<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token comment" spellcheck="true">&lt;!-- enableSubPackages:是否让schema作为包的后缀 --></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>enableSubPackages<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>javaClientGenerator</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span> <span class="token attr-name">schema</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>vending_machine<span class="token punctuation">"</span></span> <span class="token attr-name">tableName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>smoke_equip<span class="token punctuation">"</span></span>
+                       <span class="token attr-name">domainObjectName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>SmokeEquip<span class="token punctuation">"</span></span> <span class="token attr-name">enableCountByExample</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span>
+                       <span class="token attr-name">enableDeleteByExample</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span> <span class="token attr-name">enableSelectByExample</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span>
+                       <span class="token attr-name">enableUpdateByExample</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">></span></span>      
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>context</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>generatorConfiguration</span><span class="token punctuation">></span></span>
+</code></pre>
+<h3 id="11-2-Pom依赖"><a href="#11-2-Pom依赖" class="headerlink" title="11.2 Pom依赖"></a>11.2 Pom依赖</h3><pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.mybatis.generator<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>mybatis-generator-maven-plugin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>1.3.7<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">></span></span>
+      <span class="token comment" spellcheck="true">&lt;!--generatorConfig.xml位置--></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configurationFile</span><span class="token punctuation">></span></span>E:\study\study0726\generatorConfig.xml<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configurationFile</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>verbose</span><span class="token punctuation">></span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>verbose</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>overwrite</span><span class="token punctuation">></span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>overwrite</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">></span></span>
+
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>mysql<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>mysql-connector-java<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scope</span><span class="token punctuation">></span></span>runtime<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scope</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>8.0.25<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+</code></pre>
+<h3 id="11-3-效果图"><a href="#11-3-效果图" class="headerlink" title="11.3 效果图"></a>11.3 效果图</h3><p><img src="https://lovegit.oss-cn-hangzhou.aliyuncs.com/blog/202208112144886.png"></p>
+<h3 id="11-4-Example"><a href="#11-4-Example" class="headerlink" title="11.4 Example"></a>11.4 Example</h3><h4 id="什么是example类"><a href="#什么是example类" class="headerlink" title="什么是example类"></a>什么是example类</h4><blockquote>
+<p>mybatis-generator会为每个字段产生Criterion，为底层的mapper.xml创建动态sql。如果表的字段比较多,产生的example类会十分庞大。理论上通过example类可以构造你想到的任何筛选条件。在mybatis-generator中加以配置，配置数据表的生成操作就可以自动生成example了。</p>
+</blockquote>
+<h4 id="简单查询"><a href="#简单查询" class="headerlink" title="简单查询"></a>简单查询</h4><h5 id="example成员变量"><a href="#example成员变量" class="headerlink" title="example成员变量"></a>example成员变量</h5><pre class=" language-java"><code class="language-java">example<span class="token punctuation">.</span><span class="token function">setOrderByClause</span><span class="token punctuation">(</span>“字段名 ASC”<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">// 添加升序排列条件，DESC为降序</span>
+example<span class="token punctuation">.</span><span class="token function">setDistinct</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span>     <span class="token comment" spellcheck="true">// 去除重复，boolean型，true为选择不重复的记录。</span>
+criteria<span class="token punctuation">.</span>andXxxIsNull     <span class="token comment" spellcheck="true">// 添加字段xxx为null的条件</span>
+criteria<span class="token punctuation">.</span>andXxxIsNotNull    <span class="token comment" spellcheck="true">// 添加字段xxx不为null的条件</span>
+criteria<span class="token punctuation">.</span><span class="token function">andXxxEqualTo</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>    <span class="token comment" spellcheck="true">// 添加xxx字段等于value条件</span>
+criteria<span class="token punctuation">.</span><span class="token function">andXxxNotEqualTo</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>    <span class="token comment" spellcheck="true">// 添加xxx字段不等于value条件</span>
+criteria<span class="token punctuation">.</span><span class="token function">andXxxGreaterThan</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>    <span class="token comment" spellcheck="true">// 添加xxx字段大于value条件</span>
+criteria<span class="token punctuation">.</span><span class="token function">andXxxGreaterThanOrEqualTo</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>    <span class="token comment" spellcheck="true">// 添加xxx字段大于等于value条件</span>
+criteria<span class="token punctuation">.</span><span class="token function">andXxxLessThan</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>    <span class="token comment" spellcheck="true">// 添加xxx字段小于value条件</span>
+criteria<span class="token punctuation">.</span><span class="token function">andXxxLessThanOrEqualTo</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>    <span class="token comment" spellcheck="true">// 添加xxx字段小于等于value条件</span>
+criteria<span class="token punctuation">.</span><span class="token function">andXxxIn</span><span class="token punctuation">(</span>List<span class="token operator">&lt;</span>？<span class="token operator">></span><span class="token punctuation">)</span>     <span class="token comment" spellcheck="true">// 添加xxx字段值在List&lt;？>条件</span>
+criteria<span class="token punctuation">.</span><span class="token function">andXxxNotIn</span><span class="token punctuation">(</span>List<span class="token operator">&lt;</span>？<span class="token operator">></span><span class="token punctuation">)</span>    <span class="token comment" spellcheck="true">// 添加xxx字段值不在List&lt;？>条件</span>
+criteria<span class="token punctuation">.</span><span class="token function">andXxxLike</span><span class="token punctuation">(</span>“<span class="token operator">%</span>”<span class="token operator">+</span>value<span class="token operator">+</span>”<span class="token operator">%</span>”<span class="token punctuation">)</span>    <span class="token comment" spellcheck="true">// 添加xxx字段值为value的模糊查询条件</span>
+criteria<span class="token punctuation">.</span><span class="token function">andXxxNotLike</span><span class="token punctuation">(</span>“<span class="token operator">%</span>”<span class="token operator">+</span>value<span class="token operator">+</span>”<span class="token operator">%</span>”<span class="token punctuation">)</span>    <span class="token comment" spellcheck="true">// 添加xxx字段值不为value的模糊查询条件</span>
+criteria<span class="token punctuation">.</span><span class="token function">andXxxBetween</span><span class="token punctuation">(</span>value1<span class="token punctuation">,</span>value2<span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">// 添加xxx字段值在value1和value2之间条件</span>
+criteria<span class="token punctuation">.</span><span class="token function">andXxxNotBetween</span><span class="token punctuation">(</span>value1<span class="token punctuation">,</span>value2<span class="token punctuation">)</span>    <span class="token comment" spellcheck="true">// 添加xxx字段值不在value1和value2之间条件</span>
+</code></pre>
+<h5 id="selectByExample"><a href="#selectByExample" class="headerlink" title="selectByExample"></a>selectByExample</h5><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 创建 Example 对象</span>
+CountryExample example <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">CountryExample</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 设置排序规则</span>
+example<span class="token punctuation">.</span><span class="token function">setOrderByClause</span><span class="token punctuation">(</span><span class="token string">"id desc, name asc"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 设置是否 distinct 去重</span>
+example<span class="token punctuation">.</span><span class="token function">setDistinct</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 创建条件，只能有一个 createCriteria</span>
+CountryExample<span class="token punctuation">.</span>Criteria criteria <span class="token operator">=</span> example<span class="token punctuation">.</span><span class="token function">createCriteria</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// id >= 1</span>
+criteria<span class="token punctuation">.</span><span class="token function">andIdGreaterThanOrEqualTo</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// id &lt; 4</span>
+criteria<span class="token punctuation">.</span><span class="token function">andIdLessThan</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// countrycode like '%U%'</span>
+<span class="token comment" spellcheck="true">// 最容易出错的地方，注意 like 必须自己写上通配符的位置，不可能默认两边加 %，like 可以是任何情况</span>
+criteria<span class="token punctuation">.</span><span class="token function">andCountrycodeLike</span><span class="token punctuation">(</span><span class="token string">"%U%"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// or 的情况，可以有多个 or</span>
+CountryExample<span class="token punctuation">.</span>Criteria or <span class="token operator">=</span> example<span class="token punctuation">.</span><span class="token function">or</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 或者 name = 中国</span>
+or<span class="token punctuation">.</span><span class="token function">andNameEqualTo</span><span class="token punctuation">(</span><span class="token string">"中国"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 执行查询</span>
+List<span class="token operator">&lt;</span>Country<span class="token operator">></span> countryList <span class="token operator">=</span> countryMapper<span class="token punctuation">.</span><span class="token function">selectByExample</span><span class="token punctuation">(</span>example<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h5 id="updateByExampleSelective"><a href="#updateByExampleSelective" class="headerlink" title="updateByExampleSelective"></a>updateByExampleSelective</h5><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 创建 Example 对象</span>
+CountryExample example <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">CountryExample</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// Example对象包含一个static的内部类Criteria，Criteria中的方法用来定义SQL语句where后的查询条件，只能有一个createCriteria</span>
+CountryExample<span class="token punctuation">.</span>Criteria criteria <span class="token operator">=</span> example<span class="token punctuation">.</span><span class="token function">createCriteria</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 更新所有 id > 2 的国家</span>
+criteria<span class="token punctuation">.</span><span class="token function">andIdGreaterThan</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 创建一个要设置的对象</span>
+Country country <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Country</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// 将国家名字设置为 China</span>
+country<span class="token punctuation">.</span><span class="token function">setCountryname</span><span class="token punctuation">(</span><span class="token string">"China"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 执行查询</span>
+countryMapper<span class="token punctuation">.</span><span class="token function">updateByExampleSelective</span><span class="token punctuation">(</span>country<span class="token punctuation">,</span> example<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<pre><code>    我们看CountryMapper接口，可以看到有 updateByExample和updateByExampleSelective。 这两个方法的区别是，当对象的属性为空的时候，第一个方法会将值更新为null , 第二个方法不会更新null属性的字段。 通过Example一般都是批量操作，由于country表存在主键id,不能被批量更新， 因此要使用updateByExampleSelective方法进行测试。
+</code></pre>
+<p>deleteByExample+countByExample</p>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 创建 Example 对象</span>
+CountryExample example <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">CountryExample</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// Example对象包含一个static的内部类Criteria，Criteria中的方法用来定义SQL语句where后的查询条件，只能有一个createCriteria</span>
+CountryExample<span class="token punctuation">.</span>Criteria criteria <span class="token operator">=</span> example<span class="token punctuation">.</span><span class="token function">createCriteria</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 选择所有 id > 2 的国家</span>
+criteria<span class="token punctuation">.</span><span class="token function">andIdGreaterThan</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 执行查询</span>
+countryMapper<span class="token punctuation">.</span><span class="token function">deleteByExample</span><span class="token punctuation">(</span>example<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 使用 countByExample 查询符合条件的数量</span>
+<span class="token keyword">int</span> count <span class="token operator">=</span> countryMapper<span class="token punctuation">.</span><span class="token function">countByExample</span><span class="token punctuation">(</span>example<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="复杂查询"><a href="#复杂查询" class="headerlink" title="复杂查询"></a>复杂查询</h4><h5 id="and-or-查询"><a href="#and-or-查询" class="headerlink" title="and or 查询"></a>and or 查询</h5><pre class=" language-java"><code class="language-java">Example example <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Example</span><span class="token punctuation">(</span>User<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// where 条件</span>
+Criteria criteria <span class="token operator">=</span> example<span class="token punctuation">.</span><span class="token function">createCriteria</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Criteria criteria1 <span class="token operator">=</span> example<span class="token punctuation">.</span><span class="token function">createCriteria</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+criteria<span class="token punctuation">.</span><span class="token function">andIn</span><span class="token punctuation">(</span><span class="token string">"id"</span><span class="token punctuation">,</span> ids<span class="token punctuation">)</span><span class="token punctuation">;</span>
+criteria1<span class="token punctuation">.</span><span class="token function">orLike</span><span class="token punctuation">(</span><span class="token string">"des"</span><span class="token punctuation">,</span> <span class="token string">"%"</span> <span class="token operator">+</span> des <span class="token operator">+</span> <span class="token string">"%"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+criteria1<span class="token punctuation">.</span><span class="token function">orLike</span><span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">,</span> <span class="token string">"%"</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token string">"%"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+example<span class="token punctuation">.</span><span class="token function">and</span><span class="token punctuation">(</span>criteria1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+example<span class="token punctuation">.</span><span class="token function">and</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">andEqualTo</span><span class="token punctuation">(</span><span class="token string">"status"</span><span class="token punctuation">,</span> staus<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// 等效于：where id in ( #{ids} ) and ( name like concat(‘%’, #{name} ,’%’) or des like concat(‘%’, #{des} ,’%’) ) and status = #{status}</span>
+</code></pre>
+<p><strong>注意</strong>：如果不加 example.and(criteria1);，则默认example只添加生成的第一个criteria，criteria1 将不会加到此条件中</p>
+<h5 id="数组参数的条件查询"><a href="#数组参数的条件查询" class="headerlink" title="数组参数的条件查询"></a>数组参数的条件查询</h5><pre class=" language-java"><code class="language-java">Example example <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Example</span><span class="token punctuation">(</span>User<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+example<span class="token punctuation">.</span><span class="token function">and</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">andEqualTo</span><span class="token punctuation">(</span><span class="token string">"sex"</span><span class="token punctuation">,</span> sex<span class="token punctuation">)</span>
+Example<span class="token punctuation">.</span>Criteria criteria <span class="token operator">=</span> example<span class="token punctuation">.</span><span class="token function">createCriteria</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span>String str <span class="token operator">:</span> names<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    criteria<span class="token punctuation">.</span><span class="token function">orLike</span><span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">,</span> str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+example<span class="token punctuation">.</span><span class="token function">and</span><span class="token punctuation">(</span>criteria<span class="token punctuation">)</span><span class="token punctuation">;</span>
+List<span class="token operator">&lt;</span>User<span class="token operator">></span> list <span class="token operator">=</span> userMapper<span class="token punctuation">.</span><span class="token function">selectByExample</span><span class="token punctuation">(</span>example<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 等效于：where sex = #{sex} and ( name like concat(‘%’, #{name1} ,’%’) or name like concat(‘%’, #{name2} ,’%’) )</span>
+</code></pre>
+<h5 id="OR-查询"><a href="#OR-查询" class="headerlink" title="OR 查询"></a>OR 查询</h5><pre class=" language-java"><code class="language-java">VehDriverExample example <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VehDriverExample</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+VehDriverExample<span class="token punctuation">.</span>Criteria criteria <span class="token operator">=</span> example<span class="token punctuation">.</span><span class="token function">createCriteria</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+criteria<span class="token punctuation">.</span><span class="token function">andIdNumberEqualTo</span><span class="token punctuation">(</span>vehDriverParam<span class="token punctuation">.</span><span class="token function">getIdNumber</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+VehDriverExample<span class="token punctuation">.</span>Criteria criteria2 <span class="token operator">=</span> example<span class="token punctuation">.</span><span class="token function">createCriteria</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+criteria2<span class="token punctuation">.</span><span class="token function">andLicenseNumberEqualTo</span><span class="token punctuation">(</span>vehDriverParam<span class="token punctuation">.</span><span class="token function">getLicenseNumber</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+example<span class="token punctuation">.</span><span class="token function">or</span><span class="token punctuation">(</span>criteria2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+VehDriverExample<span class="token punctuation">.</span>Criteria criteria3 <span class="token operator">=</span> example<span class="token punctuation">.</span><span class="token function">createCriteria</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+criteria3<span class="token punctuation">.</span><span class="token function">andCertificateCodeEqualTo</span><span class="token punctuation">(</span>vehDriverParam<span class="token punctuation">.</span><span class="token function">getCertificateCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+example<span class="token punctuation">.</span><span class="token function">or</span><span class="token punctuation">(</span>criteria3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 等效于 select * from driver where id_number = ? or license_number = ? or certificate_code = ?</span>
+</code></pre>
 
                 
             </div>
